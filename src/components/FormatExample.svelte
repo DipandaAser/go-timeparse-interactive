@@ -1,9 +1,11 @@
 <script lang="ts">
   import LayoutRender from "./LayoutRender.svelte";
   export let layout: string;
+  export let replaceGlobalLayout: (layout: string) => void;
 </script>
 
-<div
+<button
+  on:click={() => replaceGlobalLayout(layout)}
   class="transition-all duration-150 flex flex-col items-center justify-center px-4 py-2 hover:bg-gray-800 border-2 border-gray-800 shadow-sm hover:shadow cursor-pointer"
 >
   <div>
@@ -18,4 +20,4 @@
       <span class="font-medium text-gray-400"><LayoutRender {layout} /> </span>
     </div>
   </div>
-</div>
+</button>

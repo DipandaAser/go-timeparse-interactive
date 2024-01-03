@@ -48,11 +48,14 @@
       name="my-accordion-{formatGroup.name}"
       checked={expanded ? true : false}
     />
-    <div class="collapse-content">
+    <div class="collapse-title text-center font-extralight">
+      Click on a row to add it to the global layout
+    </div>
+    <div class="collapse-content font-medium">
       <div class="overflow-x-auto">
         <table class="table text-center">
           <!-- head -->
-          <thead>
+          <thead class="font-extrabold text-base">
             <tr>
               <th>Layout</th>
               <th>Examples</th>
@@ -66,7 +69,7 @@
                 on:click={() => {
                   addPatternToGlobalLayout(layout.layout);
                 }}
-                class="hover"
+                class="hover cursor-pointer"
               >
                 <td>{layout.layout}</td>
                 <td>{layout.examples.join(", ")}</td>
@@ -84,8 +87,11 @@
   .collapse input {
     min-height: 10px;
   }
+  .collapse-arrow .collapse-title::after {
+    display: none;
+  }
 
   .collapse-title {
-    display: none;
+    display: block;
   }
 </style>

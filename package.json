@@ -7,7 +7,7 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"gh-pages": "pnpm run build && pnpx gh-pages -d build"
+		"deploy": "pnpm run build && pnpx gh-pages -d build --nojekyll --dotfiles"
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.10",
