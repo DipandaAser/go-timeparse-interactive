@@ -166,6 +166,16 @@ export const formats: FormatGroup[] = [
         ]
     },
     {
+        name: "Time zone name",
+        layouts: [
+            {
+                layout: "MST",
+                description: "Time zone name",
+                examples: ["MST", "CET", 'UTC+1']
+            },
+        ]
+    },
+    {
         name: "Numeric time zone offsets",
         layouts: [
             {
@@ -226,3 +236,4 @@ export const formats: FormatGroup[] = [
         ]
     },
 ]
+
