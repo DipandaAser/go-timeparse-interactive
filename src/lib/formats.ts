@@ -151,6 +151,32 @@ export const formats: FormatGroup[] = [
         ]
     },
     {
+        name: "Millisecond",
+        layouts: [
+            {
+                layout: ".000",
+                description: "Millisecond",
+                examples: [".000", ".999"]
+            },
+            {
+                layout: ".999",
+                description: "Millisecond no trailing zeros",
+                examples: [".000000", ".999999"]
+            },
+            {
+                layout: ".00",
+                description: "Millisecond with 2 digits",
+                examples: [".00", ".99"]
+            },
+            {
+                layout: ".0",
+                description: "Millisecond with 1 digit",
+                examples: [".0", ".9"]
+            },
+
+        ]
+    },
+    {
         name: "AM/PM",
         layouts: [
             {
