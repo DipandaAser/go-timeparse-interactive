@@ -4,10 +4,16 @@
 
   export let layout: string;
 
-  let layoutResult: string;
+  let layoutResult: string = "Loading...";
 
   async function loadData() {
-    layoutResult = await goCurrentTimeFormat(layout);
+    goCurrentTimeFormat(layout)
+      .then((res) => {
+        layoutResult = res;
+      })
+      .catch((err) => {
+        layoutResult = "Loading...";
+      });
   }
 
   onMount(() => {
