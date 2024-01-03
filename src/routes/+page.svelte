@@ -34,11 +34,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>go-time.Parse()-interactive</title>
-  <meta name="description" content="See how layout work on time packages" />
-</svelte:head>
-
 <div class="mx-auto container flex flex-col p-4">
   <h1 class="mb-4 text-center text-5xl text-gray-200 font-black tracking-wider">
     go time interactive layout builder
